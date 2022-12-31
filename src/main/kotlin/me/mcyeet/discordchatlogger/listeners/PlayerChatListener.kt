@@ -10,7 +10,6 @@ class PlayerChatListener: Listener {
 
     @EventHandler
     fun onPlayerChat(event: AsyncPlayerChatEvent) {
-        println("event triggered")
         //if (event.player.hasPermission("discordchatlogger.nolog")) return
 
         val formattedMessage = event.message
@@ -24,7 +23,6 @@ class PlayerChatListener: Listener {
             .setUsername(event.player.displayName)
             .setAvatarUrl("https://crafatar.com/renders/head/${event.player.uniqueId}")
             .execute()
-        println("event finished")
     }
 
 }

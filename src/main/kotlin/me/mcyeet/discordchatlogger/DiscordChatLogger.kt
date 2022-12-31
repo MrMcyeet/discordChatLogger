@@ -14,17 +14,13 @@ class DiscordChatLogger : JavaPlugin() {
     }
 
     override fun onLoad() {
-        println("Plugin loading")
         val defaultConfig = getResource("config.yml") ?: throw FileNotFoundException("Default config is either missing or unreadable")
         Config = YamlDocument.create(File(dataFolder, "config.yml"), defaultConfig)
         Plugin = this
-        println("Plugin loaded")
     }
 
     override fun onEnable() {
-        println("Plugin enabling")
         Bukkit.getPluginManager().registerEvents(PlayerChatListener(), Plugin)
-        println("Plugin enabled")
     }
 
     override fun onDisable() {
