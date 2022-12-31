@@ -1,0 +1,8 @@
+name: Discordchatlogger
+version: '${version}'
+main: me.mcyeet.discordchatlogger.DiscordChatLogger
+api-version: 1.16
+authors: [ MrMcyeet ]
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.7.21
+  - dev.dejvokep:boosted-yaml:1.3
